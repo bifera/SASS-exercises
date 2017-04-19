@@ -1,0 +1,20 @@
+@import 'partials/variables';
+@import 'partials/mixins';
+
+header {
+    @include page-width;
+    height: 200px;
+    background-color: $alter-color;
+}
+
+main {
+    @include page-width;
+    height: 400px;
+    background-color: $main-color;
+}
+
+footer {
+    @include page-width;
+    height: 150px;
+    background-color: $alter-color;
+}
