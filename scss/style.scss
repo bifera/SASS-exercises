@@ -1,16 +1,110 @@
 @import 'partials/variables';
 @import 'partials/mixins';
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    font-family: $primary-font;
+}
+
 header {
     @include page-width;
-    height: 200px;
     background-color: $alter-color;
+}
+
+nav {
+    width: 100%;
+    @include desktop {
+        display: flex;
+    }
+    .dropbtn {
+        width: 80px;
+        height: 80px;
+        border: 1px solid red;
+        .stripe {
+            width: 80%;
+            height: 10px;
+            background-color: $accent-color;
+            margin: 16.666666% 10%;
+        }
+        @include desktop {
+            display: none;
+        }
+    }
+    .dropdown-menu {
+        background-color: black;
+        list-style-type: none;
+        width: 100%;
+        padding: 10px 0;
+        li {
+            height: 25px;
+            margin: 10px 0;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+        @include tablet {
+            display: flex;
+            justify-content: flex-end;
+            height: 50px;
+            li {
+                margin-left: 15px;
+            }
+        }
+        @include desktop {
+            display: flex;
+            justify-content: flex-end;
+            height: 50px;
+            li {
+                margin-left: 15px;
+            }
+        }
+    }
 }
 
 main {
     @include page-width;
-    height: 400px;
     background-color: $main-color;
+    @include desktop {
+        display: flex;
+    }
+    .article-container {
+        width: 100%;
+        @include desktop {
+            display: flex;
+        }
+        @include tablet {
+            display: flex;
+        }
+        .art-sm {
+            background-color: $background-color;
+            width: 100%;
+            height: 200px;
+            margin-bottom: 10px;
+            @include tablet {
+                margin-left: 1%;
+                width: 50%;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+            @include desktop {
+                margin-left: 1%;
+            }
+        }
+        .full-width {
+            @include tablet {
+                width: 100%;
+            }
+            @include desktop {
+                margin-left: 0;
+            }
+        }
+    } 
 }
 
 footer {
@@ -18,3 +112,4 @@ footer {
     height: 150px;
     background-color: $alter-color;
 }
+

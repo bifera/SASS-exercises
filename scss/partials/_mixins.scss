@@ -1,5 +1,18 @@
 @mixin page-width {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
+}
+
+/* media */
+@mixin tablet {
+    @media #{$tablet} {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media #{$desktop} {
+        @content;
+    }
 }
