@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(){
     var dropbtn = document.querySelector(".dropbtn");
     var dropmenu = document.querySelector(".dropdown-menu");
+    var logo = document.querySelector("nav .logo");
     
     var mobileScreen = window.matchMedia("screen and (max-width: 767px)");
     

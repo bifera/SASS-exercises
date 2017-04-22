@@ -17,8 +17,19 @@ header {
 
 nav {
     width: 100%;
-    @include desktop {
-        display: flex;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .logo {
+        width: 80px;
+        height: 80px;
+        border: 1px solid red;
+        @include tablet {
+            width: 10%;
+        }
+        @include desktop {
+            width: 10%;
+        }
     }
     .dropbtn {
         width: 80px;
@@ -26,9 +37,12 @@ nav {
         border: 1px solid red;
         .stripe {
             width: 80%;
-            height: 10px;
+            height: 8px;
             background-color: $accent-color;
-            margin: 16.666666% 10%;
+            margin: 17.666% 10%;
+        }
+        @include tablet {
+            display: none;
         }
         @include desktop {
             display: none;
@@ -41,7 +55,7 @@ nav {
         padding: 10px 0;
         li {
             height: 25px;
-            margin: 10px 0;
+            margin: 10px 0 0 10px;
             a {
                 text-decoration: none;
                 color: white;
@@ -50,7 +64,8 @@ nav {
         @include tablet {
             display: flex;
             justify-content: flex-end;
-            height: 50px;
+            height: 80px;
+            width: 90%;
             li {
                 margin-left: 15px;
             }
@@ -58,13 +73,15 @@ nav {
         @include desktop {
             display: flex;
             justify-content: flex-end;
-            height: 50px;
+            height: 80px;
+            width: 90%;
             li {
                 margin-left: 15px;
             }
         }
     }
 }
+
 
 main {
     @include page-width;
